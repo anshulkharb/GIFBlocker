@@ -1,6 +1,6 @@
 # GIF Blocker - Fed up of distracting GIFs? Clean up your Internet Experience!
 
-You can download extnesion from [here](https://chrome.google.com/webstore/detail/yougreen-save-the-planet/kkmjnhmmeibepfpgnfpodpfjfahbmalm).
+You can download extnesion from [here](https://chrome.google.com/webstore/detail/gif-blocker/bdhijffnjccdajojfpahnjfeladlpefp).
 
 
 Imagine you are reading an article and come across an unnecessary GIF that has been added in between the article to make it cool. And the worst part of such an encounter? They keep playing in a loop. If you don't want this to happen again, install GIF Blocker and experience GIF Free Internet. 
