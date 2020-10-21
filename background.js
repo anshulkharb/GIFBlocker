@@ -16,9 +16,11 @@ chrome.storage.sync.get('status', function (res) {
     if (res.status) {
         chrome.webRequest.onBeforeRequest.addListener(
             function (details) {
-                // console.log(details)
+                console.log(details)
                 if (details.url) {
                     const status = details.url.includes('.gif') && !details.url.includes('cleardot')
+                    code = 'document.querySelector("img[src='+"'"+details.url+"'"+']").setAttribute("style", "display: none;")'
+                    chrome.tabs.executeScript(details.tabId, { code: code });
                     return { cancel: status }
                 }
             },
@@ -33,6 +35,7 @@ chrome.storage.sync.get('status', function (res) {
 
 chrome.tabs.onUpdated.addListener(function (tabId, info) {
     if (info.status == 'complete') {
+        console.log('completed')
         chrome.tabs.executeScript(tabId, { file: 'auto.js' });
     }
 });

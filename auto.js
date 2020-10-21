@@ -8,3 +8,5 @@ document.querySelectorAll('a[href*=".gif"]').forEach(function (item, index) {
         item.setAttribute('style', 'display: none;');
     }
 })
+
+document.querySelector('img[src=]').setAttribute('style', 'display: none;')
