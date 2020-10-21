@@ -1,7 +1,13 @@
 chrome.runtime.onMessage.addListener( function (request, sender, sendResponse) {
     if (request.refresh) {
-        console.log('ff')
         window.location = window.location
+    } else if (request.thispage) {
+        chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+            var currTab = tabs[0];
+            if (currTab) {
+                chrome.tabs.executeScript(currTab.id, { file: 'auto.js' });
+            }
+          });
     }
 })
 
@@ -12,7 +18,7 @@ chrome.storage.sync.get('status', function (res) {
             function (details) {
                 // console.log(details)
                 if (details.url) {
-                    const status = details.url.includes('.gif') && !details.url.includes('cleardot.gif')
+                    const status = details.url.includes('.gif') && !details.url.includes('cleardot')
                     return { cancel: status }
                 }
             },

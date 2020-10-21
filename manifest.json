@@ -1,6 +1,6 @@
 {
     "name": "GIF Blocker",
-    "version": "0.2",
+    "version": "0.3",
     "description": "Fed up of distracting GIFs? Clean up your Internet Experience!",
     "background": {
       "scripts": ["background.js"],
