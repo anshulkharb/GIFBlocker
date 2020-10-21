@@ -19,9 +19,11 @@ chrome.storage.sync.get('status', function (res) {
                 console.log(details)
                 if (details.url) {
                     const status = details.url.includes('.gif') && !details.url.includes('cleardot')
-                    code = 'document.querySelector("img[src='+"'"+details.url+"'"+']").setAttribute("style", "display: none;")'
-                    chrome.tabs.executeScript(details.tabId, { code: code });
-                    return { cancel: status }
+                    if (status) {
+                        code = 'document.querySelector("img[src='+"'"+details.url+"'"+']").setAttribute("style", "display: none;")'
+                        chrome.tabs.executeScript(details.tabId, { code: code });
+                        return { cancel: true }
+                    }
                 }
             },
             {
