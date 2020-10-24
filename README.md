@@ -7,6 +7,9 @@ Imagine you are reading an article and come across an unnecessary GIF that has b
 
 We may often need to block GIFs on a particular page only, not the whole internet. For such cases, you can turn off the extension and click 'Block GIFs on the current tab' whenever you may need to.
 
-In case you need to see some GIFs, turn off the extension by clicking the extension button. You can turn it on similarly.
+In case you need to see some GIFs, turn off the extension by clicking the extension button. You can turn it on 
+similarly.
+
+Disclaimer: It doesn't block all types of animated content, but GIFs only.
 
 Bonus Point: This extension will save a lot of data consumed by loading GIF.
